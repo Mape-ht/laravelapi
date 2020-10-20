@@ -24,4 +24,10 @@ class ApioperationController extends Controller
         $operations = Operation::all();
         return response()->json($operations);
     }
+
+    public function showById($id)
+    {
+        $operations = Operation::find($id);
+        return response()->json($operations);
+    }
 }
