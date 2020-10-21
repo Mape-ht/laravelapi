@@ -20,10 +20,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/client','ApiclientController@create');
 Route::get('/clients','ApiclientController@show');
 Route::get('/showclient/{id}','ApiclientController@showById');
+Route::put('/updateclient/{id}','ApiclientController@update');
 
 Route::post('/compte','ApicompteController@create');
 Route::get('/comptes','ApicompteController@show');
 Route::get('/showcompte/{id}','ApicompteController@showById');
+
 
 Route::post('/operation','ApioperationController@create');
 Route::get('/operations','ApioperationController@show');

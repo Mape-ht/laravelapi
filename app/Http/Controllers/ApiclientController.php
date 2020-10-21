@@ -40,6 +40,19 @@ class ApiclientController extends Controller
         return response()->json($clients);
     }
 
+        public function update(Request $request,$id)
+    {
+        $clients = Client::find($id);
+        $clients->nom = $request->input('nom');
+        $clients->prenom = $request->input('prenom');
+        $clients->adresse = $request->input('adresse');
+        $clients->telephone = $request->input('telephone');
+
+        
+        $clients->save();
+        return response()->json($clients);
+    }
+
     }
     /*
     *@* @param int $id

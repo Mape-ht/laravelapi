@@ -28,4 +28,6 @@ class ApicompteController extends Controller
         $comptes = Compte::all();
         return response()->json($comptes);
     }
+
+    
 }
